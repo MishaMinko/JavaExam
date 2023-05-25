@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.showBook {
+            padding: 10px;
+            margin: 10px;
+            border: solid green 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div th:each="book : ${books}" class="showBook">
+
+    <span th:text="${book.getName()}"></span>
+    <span>,</span>
+    <span th:text="${book.getDescription()}"></span>
+    <span>,</span>
+    <span th:text="${book.getPages()}"></span>
+    <span>pages ,</span>
+    <span th:text="${book.getYear()}"></span>
+    <span>year , Theme:</span>
+    <span th:text="${(book.getTheme()).getName()}"></span>
+    <span>, Category:</span>
+    <span th:text="${(book.getCategory()).getName()}"></span>
+    <span>, Press:</span>
+    <span th:text="${(book.getPress()).getName()}"></span>
+    <span>, Authors: </span>
+    <span th:each="author : ${book.getAuthors()}">
+        <span th:text="${author.getFirstName()}"></span>
+        <span th:text="${author.getLastName()}"></span>
+        <span>,</span>
+    </span>
+
+</div>
+
+</body>
+</html>
