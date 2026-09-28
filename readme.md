@@ -13,7 +13,7 @@ The project was developed as part of a course on Java and the Spring Framework (
 - **MariaDB** — database
 - **Maven** — project compilation
 
-## Features
+## Functionality
 
 - User registration and login (with roles)
 - Viewing, adding, and editing books
